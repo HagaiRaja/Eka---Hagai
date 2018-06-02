@@ -5,24 +5,25 @@ Komputer yang kita pakai saat ini menyimpan informasi dalam bentuk 1 dan 0 yang 
 ### Analisis Numerik
 
 Dalam mencari solusi setiap persoalan matematika, tidak semuanya dapat dengan mudah dicari dengan menggunakan otak dan tangan ataupun kalkulator. Mungkin menyelesaikan persoalan 5X = 10 dapat dengan mudah dan secara intuisi kita langsung tahu bahwa X = 2, tetapi bagaimana jika persoalannya X45 + X23 + 23 = 0? Hal ini akan sangat sulit untuk didapatkan jawaban pastinya sehingga baik untuk dilakukan pendekatan yang disebut sebagai analisis numerik. Analisis numerik hadir sebagai bagian studi yang mempelajari algoritma penyelesaian masalah matematika melalaui pendekatan pada jawaban aslinya. Sehingga yang didapat bukanlah jawaban “tepat” tetapi adalah jawaban yang sangat mendekati jawaban itu dengan galat yang sekecil mungkin. 
-<br>
+
 Demikianlah halnya yang dapat dilakukan ketika hendak merepresentasikan bilangan real dalam komputer. Tidak mungkin komputer yang jumlah kapasitornya terbatas dapat berhasil merepresentasikan semua bilangan real yang tidak terbatas. Tidak semua, berarti beberapa dapat direpresentasikan secara sepenuhnya. Ya benar, untuk beberapa jenis bilangan real, komputer dapat merepresentasikannya secara tepat walaupun tetap saja ada batas maksimum dan minimumnya sesuai dengan jumlah kapasitor tadi. 
-<br>
+
 Berikut kita akan membahas bagaimana beberapa jenis bilangan real direpresentasikan dalam komputer melalui metode analisis numerik serta bagaimana error yang mungkin terjadi di dalamnya.
 
 ### Bilangan Bulat
 Representasi bilangan bulat dalam computer adalah exact value. Operasi aritmatika didalamnya juga menghasilkan hal yang sama dengan prasyarat (i) hasilnya berada dalam rentang nilai angka yang dapat direpresentasikan dengan jumlah kapasitor dan (ii) setiap operasi pembagian hanya melihat hasil bilangan bulatnya saja dengan mengabaikan angka yang berada dalam koma. 
-<br>
+
 Bilangan bulat non-negatif akan sangat mudah direpresentasikan. Semua digit direpresentasi-kan dengan bit 0 dan 1, sehingga dapat langsung diinterpretasikan sebagai string biner. Sebagai contoh dengan delapan bit, kita bisa menuliskan
 """
 00110111 = (1 + 2 + 4 + 16 + 32)¬10 = 5510
 """
-<br>	
+
 Agar dapat merepresentasikan bilangan negatif juga, maka harus dilakukan pemisahan antara bilangan negatif dan positif. Idenya adalah menganggap bit pertama sebagai penanda apakah bilangan tersebut negatif (yaitu ditandai angka 1) atau positif (yaitu ditandai angka 0). Metode yang paling sering digunakan untuk menhitung nilai representasi sebuah bilangan negatif adalah dengan metode two’s complement  yaitu:
 """
 	Dalam representasi dari sebuah bilangan bulat positif X, inversi setiap bit (0 ↔ 1), dan tambahkan 1 untuk mendapatkan representasi dari -X .
 """
-	Misalkan kita memiliki delapan buah kapasitor yang merepresentasikan masing-masing sebuah bit maka kita dapat merepresentasikan seperti berikut.
+
+Misalkan kita memiliki delapan buah kapasitor yang merepresentasikan masing-masing sebuah bit maka kita dapat merepresentasikan seperti berikut.
 	<br>+2 	= 0000 0010 
 	<br>+1 	= 0000 0001 
 	<br>0 	= 0000 0000 
