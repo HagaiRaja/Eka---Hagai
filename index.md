@@ -54,3 +54,43 @@ Sehingga, dalam pecahan bernilai -1,375×22 = -5,5
 ```
 
 Hal ini tentu saja memiliki dampak error yang cukup besar karena lompatan antar satu bilangan ke bilangan lainnya hanya dapat dilakukan mencapai 0,5 sehingga disinilah sebenarnya peran analisis numerik itu sendiri banyak dipakai. Namun tetap saja, walaupun sudah dilakukan banyak pendekatan, sangat dimungkinkan kesalahan. Sehingga dalam dunia nyata, tidak disarankan sebenarnya menggunakan perhitungan bilangan pecahan menggunakan komputer.
+
+## 4.	Bilangan Real pada Interpolasi
+
+Interpolasi adalah suatu kegiatan berupa penyisipan suatu nilai diantara dua bagian berbeda untuk memperkirakan nilai suatu fungsi antara dua nilai yang telah diketahui. Pada komputer grafik, interpolasi digunakan untukmenggabungkan beberapa efek yang ingin dilakukan pada suatu obyek. Beberapa jenis interpolasi adalah : interpolasi linier dan interpolasi kuadratik.
+
+### 4.1 Interpolasi Linear
+Bentuk interpolasi yang paling sederhana adalah menghubungkan dua titik data dengan garis lurus. tehnik ini dinamakan interpolasi linear dan biasanya diilustrasikan dengan dua segitiga siku – siku yang sebangun. Persamaan dari interpolasi linier adalah : 
+
+<img src = "quo1.png"><br>
+
+Cara penulisan f1(x) menunjukkan bahwa ini adalah polinom interpolasi orde pertama (interpolasi lanjar).Perhatikan bahwa disamping menyatakan kemiringan garis yangmenghubugkan titik-titik, bentuk (f(x_1 )- f(x_0 )  )/(x_1- x_0 ) adalah hampiran (aproksimasi) beda hingga terbagi dari turunan pertama.Umumnya semakin kecil selang diantara titik-titik data, semakin baik hampirannya.
+
+Algoritma Interpolasi
+1)	Tentukan dua titik P1 dan P2 dengan koordinatnya masing-masing (x0,y0) dan (x1,y1)2)
+2)	Tentukan nilai x dari titik yang akan dicari
+3)	Hitung nilai y dengan : 
+
+<img src = "quo1.png"><br>
+
+4)	Tampilkan nilai titik (x,y) yang baru.
+
+### 4.2 Interpolasi Kudratik
+Menentukan titik-titik antara 3 buah titik dengan menggunakan pendekatan fungsikuadrat 3 titik yang diketahui: P1(x1,y1), P2(x2,y2) dan P3(x3,y3).
+Untuk memperoleh titik (x,y) digunakan rumus interpolasi kuadratik:
+
+
+
+Algoritma Interpolasi Kuadratik:
+1)	Tentukan 3 titik P1, P2 dan P3 dengan koordinatnya masing-masing(x1,y1),(x2,y2),dan(x3,y3).
+2)	Tentukan titik x dari titik yang akan dicari
+3)	Hitung nilai y dengan :
+
+<img src = "quo2.png"><br>
+
+4)	Tampilkan nilai titik yang terbaru.
+
+## Daftar Pustaka
+https://www.academia.edu/7026353/Penelitian_Matematika_Suatu_Contoh_di_Analisa_Numerik. Diakses pada tanggal 2 Juni 2018, pukul 16.53.
+http://www.lce.hut.fi/teaching/S-114.1100/lect_1.pdf. Diakses pada tanggal 2 Juni 2018, pukul 15.23.
+Haruna, Ibrahim Umar. 2015. “Minimizing Error in Scientific Numerical Computation”. Novelty Journals. 
