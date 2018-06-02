@@ -2,7 +2,7 @@
 
 Komputer yang kita pakai saat ini menyimpan informasi dalam bentuk 1 dan 0 yang dinyatakan dalam tegangan yang disimpan dalam kapasitor. Lantas bagaimana bisa komputer kita saat ini dapat mengerti angka-angka lainnya mulai dari positif, negatif, nol dan bahkan pecahan yang masuk dalam kategori bilangan real? Jawabannya terdapat pada analisis numerik yang akan kita bahas kali ini.
 
-### Analisis Numerik
+## Analisis Numerik
 
 Dalam mencari solusi setiap persoalan matematika, tidak semuanya dapat dengan mudah dicari dengan menggunakan otak dan tangan ataupun kalkulator. Mungkin menyelesaikan persoalan 5X = 10 dapat dengan mudah dan secara intuisi kita langsung tahu bahwa X = 2, tetapi bagaimana jika persoalannya X45 + X23 + 23 = 0? Hal ini akan sangat sulit untuk didapatkan jawaban pastinya sehingga baik untuk dilakukan pendekatan yang disebut sebagai analisis numerik. Analisis numerik hadir sebagai bagian studi yang mempelajari algoritma penyelesaian masalah matematika melalaui pendekatan pada jawaban aslinya. Sehingga yang didapat bukanlah jawaban “tepat” tetapi adalah jawaban yang sangat mendekati jawaban itu dengan galat yang sekecil mungkin. 
 
@@ -10,7 +10,7 @@ Demikianlah halnya yang dapat dilakukan ketika hendak merepresentasikan bilangan
 
 Berikut kita akan membahas bagaimana beberapa jenis bilangan real direpresentasikan dalam komputer melalui metode analisis numerik serta bagaimana error yang mungkin terjadi di dalamnya.
 
-### Bilangan Bulat
+## Bilangan Bulat
 Representasi bilangan bulat dalam computer adalah exact value. Operasi aritmatika didalamnya juga menghasilkan hal yang sama dengan prasyarat (i) hasilnya berada dalam rentang nilai angka yang dapat direpresentasikan dengan jumlah kapasitor dan (ii) setiap operasi pembagian hanya melihat hasil bilangan bulatnya saja dengan mengabaikan angka yang berada dalam koma. 
 
 Bilangan bulat non-negatif akan sangat mudah direpresentasikan. Semua digit direpresentasi-kan dengan bit 0 dan 1, sehingga dapat langsung diinterpretasikan sebagai string biner. Sebagai contoh dengan delapan bit, kita bisa menuliskan
@@ -40,7 +40,7 @@ Sebagian besar compiler tidak memberikan pesan error jika ada angka dalam progra
 Demikianlah cara untuk bilangan bulat real dapat direpresentasikan dalam komputer. Error yang mungkin terjadi adalah saat melakukan pembulatan pada saat pembagian ataupun pada saat operasi yang mengakibatkan hasil berada di luat interval angka minimum dan maksimum yang dapat direpresentasikan oleh komputer. Untuk mengatisipasi error ini maka harus dipertimbangkan metode kita mencari hasil dan melihatnya, apakah memang tetap valid apabila menggunakan operasi tersebut dengan menggunakan bilangan bulat apa tidak. Karena masalah ini pastinya ada dan tidak mungkin untuk dihilangan ketika berbicara bilangan bulat dan komputer.
 
 
-### Bilangan Pecahan
+## Bilangan Pecahan
 Dalam komputer tidak ada bilangan rasional, namun semuanya dapat direpresentasikan dengan presisi yang sangat terbatas. Metode yang digunakan adalah dengan membagi setiap bit dengan aturan posisi tertentu seperti dalam standar IEEE 1 digit pertama merepresentasikan tanda negatif atau positif (S). Kemudian dilanjutkan 8 atau 11 digit berikutnya merupakan representasi eksponen dari angka (E). HIngga 23 atau 52 bit terakhir disebut sebagai mantissa yang merepresentasikan angka tersebut dengan digit paling kanan bernilai satu, kemudian digit kedua bernilai setengah, kemudian sebelahnya seperempat, demikian dijumlahkan apabila bernilai 1 dan diabaikan apabila bernilai 0 (F). Berikut adalah contoh konversinya.
 
 ```cpp
