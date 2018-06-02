@@ -24,12 +24,12 @@ Agar dapat merepresentasikan bilangan negatif juga, maka harus dilakukan pemisah
 ```
 
 Misalkan kita memiliki delapan buah kapasitor yang merepresentasikan masing-masing sebuah bit maka kita dapat merepresentasikan seperti berikut.
-	+2 	= 0000 0010 
-	+1 	= 0000 0001 
-	0 	= 0000 0000 
-	−1 	= 1111 1111 
-	−2 	= 1111 1110 
- 
+	<br>+2 	= 0000 0010 
+	<br>+1 	= 0000 0001 
+	<br>0 	= 0000 0000 
+	<br>−1 	= 1111 1111 
+	<br>−2 	= 1111 1110 
+ <br>
 
 Dengan angka maksimum yang dapat direpresentasikan adalah sebesar 2n-1 – 1. Sebagai contoh, untuk 32-bit kita dapat interval angka bulat antara
 	2^31 −1 = 2147483647 = (01111111 11111111 11111111 11111111)2  dan 
