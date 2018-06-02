@@ -32,14 +32,22 @@ Misalkan kita memiliki delapan buah kapasitor yang merepresentasikan masing-masi
  <br>
 
 Dengan angka maksimum yang dapat direpresentasikan adalah sebesar 2n-1 – 1. Sebagai contoh, untuk 32-bit kita dapat interval angka bulat antara
-	2^31 −1 = 2147483647 = (01111111 11111111 11111111 11111111)2  dan 
-	−2^31 = −2147483648 = (10000000 00000000 00000000 00000000)2
-
+	<br>2^31 −1 = 2147483647 = (01111111 11111111 11111111 11111111)2  dan 
+	<br>−2^31 = −2147483648 = (10000000 00000000 00000000 00000000)2
+<br>
 Sebagian besar compiler tidak memberikan pesan error jika ada angka dalam program yang melewati batas interval angka kecuali dalam beberapa kasus.
 
 Demikianlah cara untuk bilangan bulat real dapat direpresentasikan dalam komputer. Error yang mungkin terjadi adalah saat melakukan pembulatan pada saat pembagian ataupun pada saat operasi yang mengakibatkan hasil berada di luat interval angka minimum dan maksimum yang dapat direpresentasikan oleh komputer. Untuk mengatisipasi error ini maka harus dipertimbangkan metode kita mencari hasil dan melihatnya, apakah memang tetap valid apabila menggunakan operasi tersebut dengan menggunakan bilangan bulat apa tidak. Karena masalah ini pastinya ada dan tidak mungkin untuk dihilangan ketika berbicara bilangan bulat dan komputer.
 
 
-### Support or Contact
+### Bilangan Pecahan
+Dalam komputer tidak ada bilangan rasional, namun semuanya dapat direpresentasikan dengan presisi yang sangat terbatas. Metode yang digunakan adalah dengan membagi setiap bit dengan aturan posisi tertentu seperti dalam standar IEEE 1 digit pertama merepresentasikan tanda negatif atau positif (S). Kemudian dilanjutkan 8 atau 11 digit berikutnya merupakan representasi eksponen dari angka (E). HIngga 23 atau 52 bit terakhir disebut sebagai mantissa yang merepresentasikan angka tersebut dengan digit paling kanan bernilai satu, kemudian digit kedua bernilai setengah, kemudian sebelahnya seperempat, demikian dijumlahkan apabila bernilai 1 dan diabaikan apabila bernilai 0 (F). Berikut adalah contoh konversinya.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```cpp
+Bit = 1 1000 0001 011 0000 0000 0000 0000 0000
+S = 1 		E = 1000 0001	F = 011 0000 0000 0000 0000 0000
+(negatif)	pangkat 2 		representasi 1.375
+Sehingga, dalam pecahan bernilai -1,375×22 = -5,5
+```
+
+Hal ini tentu saja memiliki dampak error yang cukup besar karena lompatan antar satu bilangan ke bilangan lainnya hanya dapat dilakukan mencapai 0,5 sehingga disinilah sebenarnya peran analisis numerik itu sendiri banyak dipakai. Namun tetap saja, walaupun sudah dilakukan banyak pendekatan, sangat dimungkinkan kesalahan. Sehingga dalam dunia nyata, tidak disarankan sebenarnya menggunakan perhitungan bilangan pecahan menggunakan komputer.
