@@ -14,27 +14,29 @@ Berikut kita akan membahas bagaimana beberapa jenis bilangan real direpresentasi
 Representasi bilangan bulat dalam computer adalah exact value. Operasi aritmatika didalamnya juga menghasilkan hal yang sama dengan prasyarat (i) hasilnya berada dalam rentang nilai angka yang dapat direpresentasikan dengan jumlah kapasitor dan (ii) setiap operasi pembagian hanya melihat hasil bilangan bulatnya saja dengan mengabaikan angka yang berada dalam koma. 
 
 Bilangan bulat non-negatif akan sangat mudah direpresentasikan. Semua digit direpresentasi-kan dengan bit 0 dan 1, sehingga dapat langsung diinterpretasikan sebagai string biner. Sebagai contoh dengan delapan bit, kita bisa menuliskan
-"""
-00110111 = (1 + 2 + 4 + 16 + 32)¬10 = 5510
-"""
+```cpp
+00110111 = (1 + 2 + 4 + 16 + 32) (basis 10) = 55 (basis 10)
+```
 
 Agar dapat merepresentasikan bilangan negatif juga, maka harus dilakukan pemisahan antara bilangan negatif dan positif. Idenya adalah menganggap bit pertama sebagai penanda apakah bilangan tersebut negatif (yaitu ditandai angka 1) atau positif (yaitu ditandai angka 0). Metode yang paling sering digunakan untuk menhitung nilai representasi sebuah bilangan negatif adalah dengan metode two’s complement  yaitu:
-"""
+```cpp
 	Dalam representasi dari sebuah bilangan bulat positif X, inversi setiap bit (0 ↔ 1), dan tambahkan 1 untuk mendapatkan representasi dari -X .
-"""
+```
 
 Misalkan kita memiliki delapan buah kapasitor yang merepresentasikan masing-masing sebuah bit maka kita dapat merepresentasikan seperti berikut.
-	<br>+2 	= 0000 0010 
-	<br>+1 	= 0000 0001 
-	<br>0 	= 0000 0000 
-	<br>−1 	= 1111 1111 
-	<br>−2 	= 1111 1110 
- 	<br>Dengan angka maksimum yang dapat direpresentasikan adalah sebesar 2n-1 – 1. Sebagai contoh, untuk 32-bit kita dapat interval angka bulat antara
-<br>2^31 −1 = 2147483647 = (01111111 11111111 11111111 11111111)2  dan 
-<br>−2^31 = −2147483648 = (10000000 00000000 00000000 00000000)2
-<br>
+	+2 	= 0000 0010 
+	+1 	= 0000 0001 
+	0 	= 0000 0000 
+	−1 	= 1111 1111 
+	−2 	= 1111 1110 
+ 
+
+Dengan angka maksimum yang dapat direpresentasikan adalah sebesar 2n-1 – 1. Sebagai contoh, untuk 32-bit kita dapat interval angka bulat antara
+	2^31 −1 = 2147483647 = (01111111 11111111 11111111 11111111)2  dan 
+	−2^31 = −2147483648 = (10000000 00000000 00000000 00000000)2
+
 Sebagian besar compiler tidak memberikan pesan error jika ada angka dalam program yang melewati batas interval angka kecuali dalam beberapa kasus.
-<br>
+
 Demikianlah cara untuk bilangan bulat real dapat direpresentasikan dalam komputer. Error yang mungkin terjadi adalah saat melakukan pembulatan pada saat pembagian ataupun pada saat operasi yang mengakibatkan hasil berada di luat interval angka minimum dan maksimum yang dapat direpresentasikan oleh komputer. Untuk mengatisipasi error ini maka harus dipertimbangkan metode kita mencari hasil dan melihatnya, apakah memang tetap valid apabila menggunakan operasi tersebut dengan menggunakan bilangan bulat apa tidak. Karena masalah ini pastinya ada dan tidak mungkin untuk dihilangan ketika berbicara bilangan bulat dan komputer.
 
 
