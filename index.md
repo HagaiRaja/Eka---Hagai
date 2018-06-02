@@ -62,7 +62,7 @@ Interpolasi adalah suatu kegiatan berupa penyisipan suatu nilai diantara dua bag
 ### 4.1 Interpolasi Linear
 Bentuk interpolasi yang paling sederhana adalah menghubungkan dua titik data dengan garis lurus. tehnik ini dinamakan interpolasi linear dan biasanya diilustrasikan dengan dua segitiga siku – siku yang sebangun. Persamaan dari interpolasi linier adalah : 
 
-<img src = "quo1.png"><br>
+<img src = "quo1.PNG"><br>
 
 Cara penulisan f1(x) menunjukkan bahwa ini adalah polinom interpolasi orde pertama (interpolasi lanjar).Perhatikan bahwa disamping menyatakan kemiringan garis yangmenghubugkan titik-titik, bentuk (f(x_1 )- f(x_0 )  )/(x_1- x_0 ) adalah hampiran (aproksimasi) beda hingga terbagi dari turunan pertama.Umumnya semakin kecil selang diantara titik-titik data, semakin baik hampirannya.
 
@@ -71,7 +71,7 @@ Algoritma Interpolasi
 2)	Tentukan nilai x dari titik yang akan dicari
 3)	Hitung nilai y dengan : 
 
-<img src = "quo1.png"><br>
+<img src = "quo1.PNG"><br>
 
 4)	Tampilkan nilai titik (x,y) yang baru.
 
@@ -86,7 +86,7 @@ Algoritma Interpolasi Kuadratik:
 2)	Tentukan titik x dari titik yang akan dicari
 3)	Hitung nilai y dengan :
 
-<img src = "quo2.png"><br>
+<img src = "quo2.PNG"><br>
 
 4)	Tampilkan nilai titik yang terbaru.
 
