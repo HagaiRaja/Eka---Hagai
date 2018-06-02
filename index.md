@@ -22,7 +22,8 @@ Bilangan bulat non-negatif akan sangat mudah direpresentasikan. Semua digit dire
 
 Agar dapat merepresentasikan bilangan negatif juga, maka harus dilakukan pemisahan antara bilangan negatif dan positif. Idenya adalah menganggap bit pertama sebagai penanda apakah bilangan tersebut negatif (yaitu ditandai angka 1) atau positif (yaitu ditandai angka 0). Metode yang paling sering digunakan untuk menhitung nilai representasi sebuah bilangan negatif adalah dengan metode two’s complement  yaitu:
 ```cpp
-	Dalam representasi dari sebuah bilangan bulat positif X, inversi setiap bit (0 ↔ 1), dan tambahkan 1 untuk mendapatkan representasi dari -X .
+	Dalam representasi dari sebuah bilangan bulat positif X, inversi setiap bit (0 ↔ 1), 
+	dan tambahkan 1 untuk mendapatkan representasi dari -X .
 ```
 
 Misalkan kita memiliki delapan buah kapasitor yang merepresentasikan masing-masing sebuah bit maka kita dapat merepresentasikan seperti berikut.
